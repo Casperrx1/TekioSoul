@@ -2,6 +2,10 @@
 <html>
   <head>
     <title>Vtubers site</title>
+
+    <html lang="en"></html>
+
+    <meta name="description" content="Welcome to my test website where I play arround in HTML, CSS and JS.">
 <!-- Meta tag for setting the viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -58,32 +62,32 @@
     </ul>
   </nav>
 </header>
-<div class="sponsors astro-J7PV25F6">
-  <div class="marquee astro-J7PV25F6">
-    <img src="test/goodsmile.svg" class="astro-J7PV25F6">
-    <img src="test/ubisoft.svg" class="astro-J7PV25F6">
-    <img src="test/sega.svg" class="astro-J7PV25F6">
-    <img src="test/squareenix.svg" class="astro-J7PV25F6">
-    <img src="test/funimation.svg" class="astro-J7PV25F6">
-    <img src="test/capcom.svg" class="astro-J7PV25F6">
-    <img src="test/goodsmile.svg" class="astro-J7PV25F6">
-    <img src="test/ubisoft.svg" class="astro-J7PV25F6">
-    <img src="test/sega.svg" class="astro-J7PV25F6">
-    <img src="test/squareenix.svg" class="astro-J7PV25F6">
-    <img src="test/funimation.svg" class="astro-J7PV25F6">
-    <img src="test/capcom.svg" class="astro-J7PV25F6">
-    <img src="test/goodsmile.svg" class="astro-J7PV25F6">
-    <img src="test/ubisoft.svg" class="astro-J7PV25F6">
-    <img src="test/sega.svg" class="astro-J7PV25F6">
-    <img src="test/squareenix.svg" class="astro-J7PV25F6">
-    <img src="test/funimation.svg" class="astro-J7PV25F6">
-    <img src="test/capcom.svg" class="astro-J7PV25F6">
-    <img src="test/goodsmile.svg" class="astro-J7PV25F6">
-    <img src="test/ubisoft.svg" class="astro-J7PV25F6">
-    <img src="test/sega.svg" class="astro-J7PV25F6">
-    <img src="test/squareenix.svg" class="astro-J7PV25F6">
-    <img src="test/funimation.svg" class="astro-J7PV25F6">
-    <img src="test/capcom.svg" class="astro-J7PV25F6">
+<div class="sponsors movingimage">
+  <div class="marquee movingimage">
+    <img src="test/goodsmile.svg" class="movingimage" aria-label="Good Smile logo">
+    <img src="test/ubisoft.svg" class="movingimage" aria-label="Ubisoft logo">
+    <img src="test/sega.svg" class="movingimage" aria-label="Sega logo">
+    <img src="test/squareenix.svg" class="movingimage" aria-label="Square Enix logo">
+    <img src="test/funimation.svg" class="movingimage" aria-label="Funimation logo">
+    <img src="test/capcom.svg" class="movingimage" aria-label="Capcom logo">
+    <img src="test/goodsmile.svg" class="movingimage" aria-label="Good Smile logo">
+    <img src="test/ubisoft.svg" class="movingimage" aria-label="Ubisoft logo">
+    <img src="test/sega.svg" class="movingimage" aria-label="Sega logo">
+    <img src="test/squareenix.svg" class="movingimage" aria-label="Square Enix logo">
+    <img src="test/funimation.svg" class="movingimage" aria-label="Funimation logo">
+    <img src="test/capcom.svg" class="movingimage" aria-label="Capcom logo">
+    <img src="test/goodsmile.svg" class="movingimage" aria-label="Good Smile logo">
+    <img src="test/ubisoft.svg" class="movingimage" aria-label="Ubisoft logo">
+    <img src="test/sega.svg" class="movingimage" aria-label="Sega logo">
+    <img src="test/squareenix.svg" class="movingimage" aria-label="Square Enix logo">
+    <img src="test/funimation.svg" class="movingimage" aria-label="Funimation logo">
+    <img src="test/capcom.svg" class="movingimage" aria-label="Capcom logo">
+    <img src="test/goodsmile.svg" class="movingimage" aria-label="Good Smile logo">
+    <img src="test/ubisoft.svg" class="movingimage" aria-label="Ubisoft logo">
+    <img src="test/sega.svg" class="movingimage" aria-label="Sega logo">
+    <img src="test/squareenix.svg" class="movingimage" aria-label="Square Enix logo">
+    <img src="test/funimation.svg" class="movingimage" aria-label="Funimation logo">
+    <img src="test/capcom.svg" class="movingimage" aria-label="Capcom logo">
   </div>
 </div>
   <!-- all of this to edit its the image same with CSS and change name from hero to banner-->
@@ -101,6 +105,11 @@
          </div>
       </section>
   <main>
+    <p>Today is <?php echo date('Y-m-d'); ?></p>
+    <div class="text-box">
+      <input type="text" placeholder="Type something here...">
+    </div>
+  
     <!-- The main content of the page goes here -->
 	<div>
     <img class="responsive-img" src="images/server.jpg" alt="picture of servers" style="width: 20%;">
@@ -110,20 +119,14 @@
   <video id="bg-video" autoplay loop muted>
     <source src="images/bgvid1.mp4" type="video/mp4">
   </video>
-
-  <div class="text-box">
-    <input type="text" placeholder="Type something here...">
-  </div>
-
-<!--MARQUEE TEST AREA-->
-  <div class="marquee-container">
-    <div class="marquee">
-      <span>Your text here</span>
+      <div class="glow-image">
+        <img src="images/r6figures.jpg" alt="Rainbow six siege figures image"style="max-width: 50%">
+      </div>
       
-
       <!-- Add more text or elements here -->
     </div>
   </div>
+<!--THIS IS FOR TEST HELP EVERYTHING BELOW IN THE MAIN IS TEST -->
 
   </main>
   <footer>

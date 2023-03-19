@@ -1,25 +1,20 @@
 html,
 /*START main*/
-body {
+body {     /* CSS for body tag */
   margin: 0;
   background-color: #242424;
 }
-
-main {
-  padding-top: 50px;
-  padding-right: 50px;
-  padding-bottom: 50px;
-  padding-left: 50px;
+main {     /* CSS for main tag */
+  padding: 50px;
 }
-
-.header {
+.header {     /* CSS for header tag */
   background-color: #F1F1F1;
   text-align: center;
   padding: 20px;
 }
 /*END main*/
-/*START auto resize*/
-@media (max-width: 600px) {
+/*START auto-resize nav*/
+@media (max-width: 600px) { /* CSS for auto-resizing navigation menu */
   nav {
     flex-direction: column;  /* set the flex direction to column when the screen width is less than 600px */
   }
@@ -32,9 +27,9 @@ main {
     padding: 10px 0;  /* reduce the padding of the navigation items */
   }
 }
-/*END auto resize*/
+/*END auto-resize nav*/
 /*START popup*/
-.popup {
+.popup {   /* CSS for popup */
   background: #009579;
   position: fixed;
   z-index: 9999; /* Add this line */
@@ -62,9 +57,9 @@ main {
 }
 /*END popup*/
 /*START banner2*/
-.banner2 {
+.banner2 {   /* CSS for banner2 */
   height: 650px;
-  background-image: ;
+  background: url("https://spaces.w3schools.com/images/HVYepJYeHdQ.jpg") ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -94,14 +89,13 @@ main {
 }
 /*END banner2*/
 /*START */
-.text-box {
+.text-box {   /* CSS for text box with glow animation */
   display: inline-block;
-  padding: 10px;
+  padding: 0px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   animation: glow 2s infinite;
 }
-
 @keyframes glow {
   0% {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5),
@@ -127,32 +121,88 @@ main {
                 0 0 50px rgba(0, 255, 0, 0.1);
   }
 }
-
-/*START */
-@keyframes marquee {
+/*START*/
+@keyframes marquee { /*marquee aka the logos animated bar BROKEN ON LOOP CAN'T FIGURE OUT FOX AT THE TIME*/
 0% {
-    transform: translate(0);
+    transform: translate(0%);
 }
 100% {
-    transform: translate(-25%);
+    transform: translate(-50%);
 }
 }
-.sponsors:where(.astro-J7PV25F6) {
-  background: var(--white);
+.sponsors:where(.movingimage) {
+  background: white;
   overflow: hidden;
 }
-.marquee:where(.astro-J7PV25F6) {
+.marquee:where(.movingimage) {
   display: flex;
   align-items: center;
   height: 8.25rem;
   width: fit-content;
   will-change: transform;
-  animation: marquee 24s linear infinite;
+  animation: 24s marquee linear infinite;
 }
-.sponsors:where(.astro-J7PV25F6) img:where(.astro-J7PV25F6) {
+.sponsors:where(.movingimage) img:where(.movingimage) {
   width: 8rem;
   height: 3.5rem;
   margin: 0 2rem;
+}
+/*END*/
+/*START*/
+.glow-image { /*Glow arround image*/
+  display: inline-block;
+  position: relative;
+}
+.glow-image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 10px;
+  animation: glow2 2s linear infinite;
+}
+.glow-image img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+@keyframes glow2 {
+  0% {
+    box-shadow: 0 0 10px #ff0000,
+                0 0 20px #ff7700,
+                0 0 30px #ffd500,
+                0 0 40px #aaff00,
+                0 0 50px #00ff55,
+                0 0 60px #00aaff,
+                0 0 70px #1700ff,
+                0 0 80px #8a00ff,
+                0 0 90px #ff00ee;
+  }
+  50% {
+    box-shadow: 0 0 5px #ff0000,
+                0 0 10px #ff7700,
+                0 0 15px #ffd500,
+                0 0 20px #aaff00,
+                0 0 25px #00ff55,
+                0 0 30px #00aaff,
+                0 0 35px #1700ff,
+                0 0 40px #8a00ff,
+                0 0 45px #ff00ee;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff0000,
+                0 0 20px #ff7700,
+                0 0 30px #ffd500,
+                0 0 40px #aaff00,
+                0 0 50px #00ff55,
+                0 0 60px #00aaff,
+                0 0 70px #1700ff,
+                0 0 80px #8a00ff,
+                0 0 90px #ff00ee;
+  }
 }
 /*END*/
 /*TEST*/

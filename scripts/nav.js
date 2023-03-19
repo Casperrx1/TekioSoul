@@ -21,3 +21,5 @@ function myFunction(dropdownId) {
     currentDropdown = dropdown;
   }
 }
+
+/*TEST AREA BELLOW*/
