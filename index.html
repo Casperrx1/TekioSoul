@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vtubers site</title>
+    <title>Test Site</title>
 
-    <html lang="en"></html>
+    <html lang="en">
 
     <meta name="description" content="Welcome to my test website where I play arround in HTML, CSS and JS.">
 <!-- Meta tag for setting the viewport -->
@@ -19,9 +19,13 @@
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/img.css">
 <link rel="stylesheet" href="css/nav.css">
+
+<script type="module">const a=Array(1001).fill(0).map((c,t)=>{const e=t/1e3,n=3*(1-e)*e*e*.58+e*e*e,o=3*(1-e)*e*e+e*e*e;return[n,o]}).reverse(),l=document.querySelector(".meet"),u=document.querySelector(".meet .faces"),s=()=>{const c=document.documentElement.clientHeight,{bottom:t,height:e}=l.getBoundingClientRect(),n=.2,o=1-(t-c)/e+n,r=Math.min(Math.max(o,0),1),m=a.find(([i,d])=>i<=r)[1];u.style.setProperty("--scroll",`${m}`)};document.addEventListener("scroll",()=>{requestAnimationFrame(s)});s();
+</script>
   </head>
-  
+
 <body>
+  <!--Popup-->
 <div class="popup">
     <div class="popup__content">
       <div class="popup__text">
@@ -36,12 +40,14 @@
   </div>
 
 <header>
-  <img class="responsive-img center" src="images/bannerimg.png" alt="Banner Image">
-  <nav class="topnav">
+  <!--LOGO-->
+  <img src="images/gawrgurasenzawaportrait.png" alt="Logo" class="logo">
+    <!--NAVIGATION-->
+  <nav class="topnav bolded">
     <ul>
       <li><a href="index.html">MAIN</a></li>
-      <li class="dropdown">
-        <button onclick="myFunction('groupDropdown')" class="dropbtn">GROUP</button>
+      <li class="dropdown bolded">
+        <button onclick="myFunction('groupDropdown')" class="dropbtn bolded">GROUP</button>
         <div id="groupDropdown" class="dropdown-content">
           <a href="hololive.html">HOLOLIVE</a>
           <a href="#">NIJISANJI</a>
@@ -53,7 +59,7 @@
         </div>
       </li>
       <li class="dropdown">
-        <button onclick="myFunction('indieDropdown')" class="dropbtn">INDIE</button>
+        <button onclick="myFunction('indieDropdown')" class="dropbtn bolded">INDIE</button>
         <div id="indieDropdown" class="dropdown-content">
           <a href="#">AAAAaaaaaaaaa</a>
           <a href="#">BBBBbbbb</a>
@@ -62,32 +68,35 @@
     </ul>
   </nav>
 </header>
+  <!--BANNER-->
+<img class="responsive-img center" src="images/bannerimg.png" alt="Banner Image">
+  <!--MOVING LOGOS MARQUEE-->
 <div class="sponsors movingimage">
   <div class="marquee movingimage">
-    <img src="test/goodsmile.svg" class="movingimage" aria-label="Good Smile logo">
-    <img src="test/ubisoft.svg" class="movingimage" aria-label="Ubisoft logo">
-    <img src="test/sega.svg" class="movingimage" aria-label="Sega logo">
-    <img src="test/squareenix.svg" class="movingimage" aria-label="Square Enix logo">
-    <img src="test/funimation.svg" class="movingimage" aria-label="Funimation logo">
-    <img src="test/capcom.svg" class="movingimage" aria-label="Capcom logo">
-    <img src="test/goodsmile.svg" class="movingimage" aria-label="Good Smile logo">
-    <img src="test/ubisoft.svg" class="movingimage" aria-label="Ubisoft logo">
-    <img src="test/sega.svg" class="movingimage" aria-label="Sega logo">
-    <img src="test/squareenix.svg" class="movingimage" aria-label="Square Enix logo">
-    <img src="test/funimation.svg" class="movingimage" aria-label="Funimation logo">
-    <img src="test/capcom.svg" class="movingimage" aria-label="Capcom logo">
-    <img src="test/goodsmile.svg" class="movingimage" aria-label="Good Smile logo">
-    <img src="test/ubisoft.svg" class="movingimage" aria-label="Ubisoft logo">
-    <img src="test/sega.svg" class="movingimage" aria-label="Sega logo">
-    <img src="test/squareenix.svg" class="movingimage" aria-label="Square Enix logo">
-    <img src="test/funimation.svg" class="movingimage" aria-label="Funimation logo">
-    <img src="test/capcom.svg" class="movingimage" aria-label="Capcom logo">
-    <img src="test/goodsmile.svg" class="movingimage" aria-label="Good Smile logo">
-    <img src="test/ubisoft.svg" class="movingimage" aria-label="Ubisoft logo">
-    <img src="test/sega.svg" class="movingimage" aria-label="Sega logo">
-    <img src="test/squareenix.svg" class="movingimage" aria-label="Square Enix logo">
-    <img src="test/funimation.svg" class="movingimage" aria-label="Funimation logo">
-    <img src="test/capcom.svg" class="movingimage" aria-label="Capcom logo">
+    <img src="logos/Ayakacorporationlogo.svg" class="movingimage" aria-label="Ayaka corporation logo">
+    <img src="logos/FIFElogo.svg" class="movingimage" aria-label="FIFE logo">
+    <img src="logos/GoofSmilyCompanylogo.svg" class="movingimage" aria-label="GoofSmilyCompany logo">
+    <img src="logos/mynameisjefflogo.svg" class="movingimage" aria-label="My Name is jeff logo">
+    <img src="logos/JuliiInclogo.svg" class="movingimage" aria-label="Julii Inc logo">
+    <img src="logos/swagglogo.svg" class="movingimage" aria-label="Swagg logo">
+    <img src="logos/Ayakacorporationlogo.svg" class="movingimage" aria-label="Ayaka corporation logo">
+    <img src="logos/FIFElogo.svg" class="movingimage" aria-label="FIFE logo">
+    <img src="logos/GoofSmilyCompanylogo.svg" class="movingimage" aria-label="GoofSmilyCompany logo">
+    <img src="logos/mynameisjefflogo.svg" class="movingimage" aria-label="My Name is jeff logo">
+    <img src="logos/JuliiInclogo.svg" class="movingimage" aria-label="Julii Inc logo">
+    <img src="logos/swagglogo.svg" class="movingimage" aria-label="Swagg logo">
+    <img src="logos/Ayakacorporationlogo.svg" class="movingimage" aria-label="Ayaka corporation logo">
+    <img src="logos/FIFElogo.svg" class="movingimage" aria-label="FIFE logo">
+    <img src="logos/GoofSmilyCompanylogo.svg" class="movingimage" aria-label="GoofSmilyCompany logo">
+    <img src="logos/mynameisjefflogo.svg" class="movingimage" aria-label="My Name is jeff logo">
+    <img src="logos/JuliiInclogo.svg" class="movingimage" aria-label="Julii Inc logo">
+    <img src="logos/swagglogo.svg" class="movingimage" aria-label="Swagg logo">
+    <img src="logos/Ayakacorporationlogo.svg" class="movingimage" aria-label="Ayaka corporation logo">
+    <img src="logos/FIFElogo.svg" class="movingimage" aria-label="FIFE logo">
+    <img src="logos/GoofSmilyCompanylogo.svg" class="movingimage" aria-label="GoofSmilyCompany logo">
+    <img src="logos/mynameisjefflogo.svg" class="movingimage" aria-label="My Name is jeff logo">
+    <img src="logos/JuliiInclogo.svg" class="movingimage" aria-label="Julii Inc logo">
+    <img src="logos/swagglogo.svg" class="movingimage" aria-label="Swagg logo">
   </div>
 </div>
   <!-- all of this to edit its the image same with CSS and change name from hero to banner-->
@@ -105,11 +114,9 @@
          </div>
       </section>
   <main>
-    <p>Today is <?php echo date('Y-m-d'); ?></p>
-    <div class="text-box">
-      <input type="text" placeholder="Type something here...">
+    <div class="bordered-paragraph">
+      <p>This is a paragraph with a border around it. I am trying to figure out what to put in this.</p>
     </div>
-  
     <!-- The main content of the page goes here -->
 	<div>
     <img class="responsive-img" src="images/server.jpg" alt="picture of servers" style="width: 20%;">

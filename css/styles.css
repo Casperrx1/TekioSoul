@@ -5,26 +5,64 @@ body {     /* CSS for body tag */
   background-color: #242424;
 }
 main {     /* CSS for main tag */
-  padding: 50px;
+  padding: 5%;
 }
 .header {     /* CSS for header tag */
   background-color: #F1F1F1;
   text-align: center;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section {
+  font-family: sans-serif;
 }
 /*END main*/
+/*START TEXT STYLING*/
+.bolded { font-weight: bold; }
+/*END TEXT STYLING*/
 /*START auto-resize nav*/
 @media (max-width: 600px) { /* CSS for auto-resizing navigation menu */
   nav {
-    flex-direction: column;  /* set the flex direction to column when the screen width is less than 600px */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   nav li {
-    flex: none;  /* set the flex property of the navigation items to none */
+    flex: 1;
+    text-align: center;
   }
   
   nav a {
-    padding: 10px 0;  /* reduce the padding of the navigation items */
+    padding: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* Adjust the layout for small screens */
+  .banner2-title {
+    font-size: 4em;
+  }
+  
+  .banner2-text p {
+    width: 100%;
+  }
+  
+  /* Hide the logo on small screens */
+  .logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust the font sizes for smaller screens */
+  .banner2-title {
+    font-size: 3em;
+  }
+  
+  .banner2-text p {
+    font-size: 1em;
   }
 }
 /*END auto-resize nav*/
@@ -56,6 +94,17 @@ main {     /* CSS for main tag */
   color: #ffffff;
 }
 /*END popup*/
+/*START LOGO*/
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  z-index: 990;
+}
+/*END LOGO*/
 /*START banner2*/
 .banner2 {   /* CSS for banner2 */
   height: 650px;
@@ -89,12 +138,11 @@ main {     /* CSS for main tag */
 }
 /*END banner2*/
 /*START */
-.text-box {   /* CSS for text box with glow animation */
-  display: inline-block;
-  padding: 0px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  animation: glow 2s infinite;
+.bordered-paragraph {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  animation: glow 5s infinite;
 }
 @keyframes glow {
   0% {
@@ -104,30 +152,42 @@ main {     /* CSS for main tag */
                 0 0 40px rgba(255, 0, 0, 0.2),
                 0 0 50px rgba(255, 0, 0, 0.1);
   }
-  
-  50% {
+  25% {
     box-shadow: 0 0 20px rgba(255, 255, 0, 0.5),
                 0 0 30px rgba(255, 255, 0, 0.4),
                 0 0 40px rgba(255, 255, 0, 0.3),
                 0 0 50px rgba(255, 255, 0, 0.2),
                 0 0 60px rgba(255, 255, 0, 0.1);
   }
-  
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5),
+                0 0 40px rgba(0, 255, 0, 0.4),
+                0 0 50px rgba(0, 255, 0, 0.3),
+                0 0 60px rgba(0, 255, 0, 0.2),
+                0 0 70px rgba(0, 255, 0, 0.1);
+  }
+  75% {
+    box-shadow: 0 0 40px rgba(0, 0, 255, 0.5),
+                0 0 50px rgba(0, 0, 255, 0.4),
+                0 0 60px rgba(0, 0, 255, 0.3),
+                0 0 70px rgba(0, 0, 255, 0.2),
+                0 0 80px rgba(0, 0, 255, 0.1);
+  }
   100% {
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5),
-                0 0 20px rgba(0, 255, 0, 0.4),
-                0 0 30px rgba(0, 255, 0, 0.3),
-                0 0 40px rgba(0, 255, 0, 0.2),
-                0 0 50px rgba(0, 255, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5),
+                0 0 20px rgba(255, 0, 0, 0.4),
+                0 0 30px rgba(255, 0, 0, 0.3),
+                0 0 40px rgba(255, 0, 0, 0.2),
+                0 0 50px rgba(255, 0, 0, 0.1);
   }
 }
 /*START*/
 @keyframes marquee { /*marquee aka the logos animated bar BROKEN ON LOOP CAN'T FIGURE OUT FOX AT THE TIME*/
 0% {
-    transform: translate(0%);
+    transform: translateX(0%);
 }
 100% {
-    transform: translate(-50%);
+    transform: translateX(-50%);
 }
 }
 .sponsors:where(.movingimage) {
@@ -137,10 +197,10 @@ main {     /* CSS for main tag */
 .marquee:where(.movingimage) {
   display: flex;
   align-items: center;
-  height: 8.25rem;
+  height: 5rem;
   width: fit-content;
   will-change: transform;
-  animation: 24s marquee linear infinite;
+  animation: 26s marquee linear infinite;
 }
 .sponsors:where(.movingimage) img:where(.movingimage) {
   width: 8rem;
