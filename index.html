@@ -21,7 +21,7 @@
 <div class="popup">
     <div class="popup__content">
       <div class="popup__text">
-        <strong>Reminder:</strong> This is a banner test with JS uses banner.js and .banner in css
+        <strong>Reminder:</strong> This is a made up VTuber agency which I made to play around with more web dev.
       </div>
       <button class="popup__close" type="button">
         <span class="material-icons">
@@ -39,7 +39,7 @@
     <ul>
       <li><a href="index.html">MAIN</a></li>
       <li class="dropdown bolded">
-        <button onclick="myFunction('groupDropdown')" class="dropbtn bolded">GROUP</button>
+        <button onclick="myFunction('groupDropdown')" class="dropbtn bolded">TALENT</button>
         <div id="groupDropdown" class="dropdown-content">
           <a href="hololive.html">HOLOLIVE</a>
           <a href="#">NIJISANJI</a>
@@ -51,7 +51,14 @@
         </div>
       </li>
       <li class="dropdown">
-        <button onclick="myFunction('indieDropdown')" class="dropbtn bolded">INDIE</button>
+        <button onclick="myFunction('indieDropdown')" class="dropbtn bolded">STAFF</button>
+        <div id="indieDropdown" class="dropdown-content">
+          <a href="#">AAAAaaaaaaaaa</a>
+          <a href="#">BBBBbbbb</a>
+		    </div>
+      </li>
+      <li class="dropdown">
+        <button onclick="myFunction('indieDropdown')" class="dropbtn bolded">ABOUT US</button>
         <div id="indieDropdown" class="dropdown-content">
           <a href="#">AAAAaaaaaaaaa</a>
           <a href="#">BBBBbbbb</a>
@@ -61,8 +68,50 @@
   </nav>
 </header>
   <!--BANNER-->
-<img class="responsive-img center" src="images/bannerimg.png" alt="Banner Image">
-  <!--MOVING LOGOS MARQUEE-->
+<img class="banner" src="EDITS/First BackgroundAnimeCarsALCROP.png" alt="Banner Image">
+
+  <!-- all of this to edit its the image same with CSS name banner-->
+  <section>
+         <div class="banner2" id="about">
+           <div class="banner2-description">
+             <div class="banner2-text">
+              <h1 class="banner2-title">Welcome to tekiosoul</h1>
+              <p>
+                TEKIOSOUL テキオスール is a VTube agency that specializes in managing and promoting virtual content creators on platforms like YouTube and Twitch. The agency provides support and resources to help its creators grow their audience and monetize their content. Tekiosoul also offers a range of services, such as custom avatar design, video editing, and social media management, to ensure its creators have the best possible chance of success. With a focus on quality and innovation, Tekiosoul is dedicated to helping virtual content creators achieve their full potential in the digital world.
+              </p>
+             </div>
+           </div>
+         </div>
+      </section>
+  <main>
+    <section> <!--THIS IS THE COLUMN GRID WITH TALENT NAME PIC AND DESC-->
+      <div class="even-columns">
+       <div>
+      <h1 class="even-columns-title">Sora Soulia</h1>
+      <img class="even-columns-img" src="EDITS/vtuber1.PNG"> 
+       <P class="even-columns-text">Sora Soulia who embodies the grace and power of a sky goddess. With her charming personality and millennia of experience, She brings a unique perspective to our mortal world. Despite her age of 90000 years, she maintains a youthful spirit and exudes positivity and kindness in all her interactions. As a sky goddess, Sora Soulia has command over the elements of wind and lightning, which she can use to overcome any obstacle. Her fans Soulites are drawn to her ethereal beauty and otherworldly presence, as well as her insightful commentary on a variety of topics. Whether she's streaming gameplay or chatting with fans, Sora Soulia's wisdom and charisma are sure to captivate and inspire anyone who encounters her.</P>
+        </div>
+         <div>
+         <h1 class="even-columns-title">Luminaria Nova</h1>
+         <img class="even-columns-img" src="EDITS/vtuber1.PNG"> 
+         <P class="even-columns-text"> Luminaria Nova who radiates positivity and light. Her name, which combines "luminous" and "aria" with "nova", suggests a powerful, explosive energy that is both dazzling and inspiring. Luminaria Nova is always seeking out new experiences and challenges to share with her fans. Whether she's exploring the latest video game or sharing her thoughts on current events, she approaches everything with a sense of curiosity and wonder that is infectious. Her bright and bubbly personality makes her a favorite among viewers of all ages, and her insightful commentary and heartfelt messages have won her a devoted following. With her infectious energy and sparkling personality, Luminaria Nova is a shining star in the world for her fanbase called Lumis.</P>
+         </div>
+         <div>
+         <h1 class="even-columns-title">Celestia Lyra</h1>
+         <img class="even-columns-img" src="EDITS/vtuber1.PNG"> 
+         <P class="even-columns-text">Celestia Lyra the ethereal beauty and enchanting melody of the cosmos. Her name evokes the heavens and the stars with a rich and captivating sound. As a virtual personality, Celestia Lyra is known for her enchanting singing voice and her skillful playing of games. Her performances are mesmerizing and transport her fans to a realm of pure, unbridled creativity. Beyond her music, Celestia Lyra is also known for her insightful commentary on a range of topics, from Anime and gaming to pop culture. Her fans admire her for her intelligence, her talent, and her otherworldly beauty. With her celestial voice and her magnetic personality.</P>
+         </div>
+       </section>
+        <!-- The main content of the page goes here -->
+    <div class="bordered-paragraph">
+      <p class="text">This is a paragraph with a border around it. I am trying to figure out what to put in this. In addition the current image for all 3 VTubers is from <a class="text" href="https://gcb384076498.booth.pm/items/4145288">BOOTH</a></p>
+    </div>
+      <div class="glow-image">
+        <img src="EDITS/First BackgroundAnimeCarsALCROP.png" alt="Rainbow six siege figures image" style="max-width: 50%">
+      </div>
+<h1 class="title">OUR AMAZING SPONSORS</h1>
+  </main>
+    <!--MOVING LOGOS MARQUEE-->
 <div class="sponsors movingimage">
   <div class="marquee movingimage">
     <img src="logos/Ayakacorporationlogo.svg" class="movingimage" alt="Ayaka corporation logo">
@@ -91,34 +140,6 @@
     <img src="logos/swagglogo.svg" class="movingimage" alt="Swagg logo">
   </div>
 </div>
-  <!-- all of this to edit its the image same with CSS name banner-->
-  <section>
-         <div class="banner2" id="about">
-           <div class="banner2-description">
-             <div class="banner2-text">
-              <h1 class="banner2-title">Welcome to my website</h1>
-              <p>
-                A meme is a cultural idea or behavior that is spread from person to person within a particular community or society. The term "meme" was coined by biologist Richard Dawkins in 1976 to describe the way in which cultural information spreads and evolves, much like genes do in biological evolution.
-                In modern times, memes are typically images, videos, or pieces of text that are spread through social media and other online platforms, often with humorous or satirical intent. Memes can take many forms, including catchphrases, internet memes, and viral videos, and they often reflect current events, cultural trends, or social commentary. They can be used to convey complex ideas or emotions in a simple and relatable way and can be a powerful tool for shaping public opinion and influencing behavior.
-              </p>
-             </div>
-           </div>
-         </div>
-      </section>
-  <main>
-        <!-- The main content of the page goes here -->
-    <div class="bordered-paragraph">
-      <p>This is a paragraph with a border around it. I am trying to figure out what to put in this.</p>
-    </div>
-	<div>
-    <img class="responsive-img" src="images/server.jpg" alt="picture of servers" style="width: 20%;">
-    <p style="display: inline-block; margin-left: 20px; margin-right: 20px;">These are two of my college rooms where i learned Computing with Digital Media</p>
-    <img class="responsive-img" src="images/college.jpg" alt="picture from my college" style="width: 20%;" >
-	</div>
-      <div class="glow-image">
-        <img src="images/r6figures.jpg" alt="Rainbow six siege figures image" style="max-width: 50%">
-      </div>
-  </main>
   <footer>
     <div class="container">
 
@@ -149,9 +170,9 @@
           <div class="content">
       <p class="stit">TekioSoul - First wave - </p>
       <ul>
-      <li><a href="#" target="_blank">NAME<span class="ex_icon"></span></a></li>
-      <li><a href="#" target="_blank">NAME<span class="ex_icon"></span></a></li>
-      <li><a href="#" target="_blank">NAME<span class="ex_icon"></span></a></li>
+      <li><a href="#" target="_blank">Sora Soulia<span class="ex_icon"></span></a></li>
+      <li><a href="#" target="_blank">Luminaria Nova<span class="ex_icon"></span></a></li>
+      <li><a href="#" target="_blank">Celestia Lyra<span class="ex_icon"></span></a></li>
       </ul>
       </div>
       <div class="content">
