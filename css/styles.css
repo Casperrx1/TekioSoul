@@ -1,27 +1,131 @@
-html,
-/*START main*/
-body {     /* CSS for body tag */
-  margin: 0;
-  background-color: #242424;
+@charset "utf-8"; 
+*{ /*applies the box-sizing property to all elements in the document to make sure that padding and borders are included in the element's total width and height.*/
+  box-sizing: border-box; /*The box-sizing property isn't supported in IE6 and IE7.*/
+} 
+:root{ /*defines the root element kindoff like html bellow but higher priority*/
+--font_01:sans-serif;
+--font_02:'Rubik'; /*NEED TO DELETE THE ' FOR IT TO WORK PLACE HOLDER FOR NOW*/
+--color-white:#fff; /*Text*/
+--color-primary: #161616; /*Background*/
+--color-title:#f3c436; /*Link text footer*/
+--color-line:#fff; /*Lince color*/
+--color-gra:linear-gradient(#9e355d, #7f3254, #4b2735 ); /*Footer*/
 }
-main {     /* CSS for main tag */
+html { /*defines the styling for the HTML element, including the scroll behavior and padding.*/
+  overflow-y:scroll; 
+  height:100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body { /*defines the styling for the body element, including the background color, font family, size, and color, as well as the height, background image, and background attachment.*/
+    margin: 0;
+  background-color: var(--color-primary);
+	text-align: left;
+	font-family: var(--font_01);
+    font-weight: 400;
+	font-size: 16px;
+	height: 100%;
+}
+main { /*defines the styling for the main element, including the padding*/
   padding: 5%;
 }
-.header {     /* CSS for header tag */
-  background-color: #F1F1F1;
+.header { /*defines the styling for the header, IT DOES NOT DO ANYTHING FOR NOW AND I AM NOT TAKING IT OUT FOR THE SECOND*/
+  background-color: var(--color-primary);
   text-align: center;
-  padding: 20px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-section {
-  font-family: sans-serif;
+section { /*defines the styling for the section, font - only used right now for the img with text over it might delete*/
+  font-family: var(--font_01);
 }
-/*END main*/
-/*START TEXT STYLING*/
-.bolded { font-weight: bold; }
-/*END TEXT STYLING*/
+.logo {
+  width: auto;
+  height: 60px;
+  margin-right: 10px;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  z-index: 990;
+}
+
+
+.bolded { /*BOLDED*/
+  font-weight: bold; 
+}
+
+
+.topnav { /*defines the styling for the navigation bar, color, border, font, size*/
+  position: fixed;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  z-index: 990;
+  font-family: Arial, sans-serif;
+  border: 2px solid white;
+  }
+  .topnav ul { /*defines the styling for the navigation bar, padding, more*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  }
+  .topnav li { /*defines the styling for the navigation bar, position*/
+  position: relative;
+  }
+  .topnav a { /*defines the styling for the navigation bar, color, text,*/
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  }
+  .topnav li a:hover:not(.active) { /*defines the styling for the navigation bar, hover color*/
+  background-color: #2980B9;
+  }
+  .dropdown { /*defines the styling for the navigation dropdown,*/
+  position: relative;
+  display: inline-block;
+  }
+  .dropbtn {
+  background-color: #ff00d400;
+  color: rgb(0, 0, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  }
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 1px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+  opacity: 0.8;
+  }
+  .dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  }
+  .dropdown-content a:hover {
+  background-color: #2980B9;
+  }
+  .show {
+  display:block;
+  }
+
+
 /*START auto-resize nav*/
 @media (max-width: 600px) { /* CSS for auto-resizing navigation menu */
   nav {
@@ -66,7 +170,8 @@ section {
   }
 }
 /*END auto-resize nav*/
-/*START popup*/
+
+
 .popup {   /* CSS for popup */
   background: #009579;
   position: fixed;
@@ -93,18 +198,9 @@ section {
 .popup__close span {
   color: #ffffff;
 }
-/*END popup*/
-/*START LOGO*/
-.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  position: fixed;
-  top: 1%;
-  left: 1%;
-  z-index: 990;
-}
-/*END LOGO*/
+
+
+
 /*START banner2*/
 .banner2 {   /* CSS for banner2 */
   height: 650px;
@@ -182,6 +278,7 @@ section {
   }
 }
 /*START*/
+
 @keyframes marquee { /*marquee aka the logos animated bar BROKEN ON LOOP CAN'T FIGURE OUT FOX AT THE TIME*/
 0% {
     transform: translateX(0%);
@@ -192,7 +289,9 @@ section {
 }
 .sponsors:where(.movingimage) {
   background: white;
+  width: fit-content;
   overflow: hidden;
+  max-width: 100%;
 }
 .marquee:where(.movingimage) {
   display: flex;
@@ -200,7 +299,7 @@ section {
   height: 5rem;
   width: fit-content;
   will-change: transform;
-  animation: 26s marquee linear infinite;
+  animation: marquee 20s linear infinite;
 }
 .sponsors:where(.movingimage) img:where(.movingimage) {
   width: 8rem;
@@ -265,4 +364,64 @@ section {
   }
 }
 /*END*/
-/*TEST*/
+.container{ /*THIS IS IN THE FOOTER RIGHT NOW*/
+  max-width:1100px; 
+  width: 90%; 
+  margin: 0 auto;
+}
+#container{
+  overflow-x: hidden;
+}
+a { /*This does the footer animation I THINK NEED TO CHECK*/
+  color: #000;
+  text-decoration: none;
+  outline:none;
+  transition: 0.2s;}
+a:hover {
+  transition: 0.2s;
+}
+footer{
+  background: var(--color-gra);
+  font-family:  "Quicksand", sans-serif;
+  color: #fff;padding: 20px 0;
+  line-height: 2em;
+}
+footer .foot_box{ display: flex; justify-content: space-between; margin-bottom: 60px;}
+footer .foot_box a{position: relative; transition: .3s;}
+footer .foot_box a::before{position: absolute; content: ''; width: 0; height: 1px; left: 0; bottom: -.2em; background-color: var(--color-white); transition: .3s;}
+footer .foot_box a:hover{opacity: .7; transition: .3s;}
+footer .foot_box a:hover::before{width: 100%; transition: .3s;}
+footer .foot_box a.foot_logo::before{content: none;}
+footer .foot_box .left{ width: 50%; text-align: left;}
+footer .foot_box .left .foot_logo{ display: block; line-height: 0; margin-bottom: 40px;max-width: 200px;}
+footer .foot_box .left .foot_nav ul{display: flex;flex-wrap: wrap;margin-bottom: 10px;}
+footer .foot_box .left .foot_nav ul li{ margin-right: 1em; display: inline-block;}
+footer .foot_box .left .foot_nav ul li a{ color: var(--color-white);font-size: 20px;font-weight: bold;}
+footer .foot_box .left .foot_nav ul.nav_02 li a{ font-size: 16px;}
+footer .foot_box .left .foot_nav ul.nav_03 li a{ font-size: 14px; font-weight: 400;}
+footer .foot_box .right{ width: 40%; text-align: left;}
+footer .foot_box .right .content{border-bottom: 1px solid #fff;padding: 20px 0 12px;font-size: 14px;}
+footer .foot_box .right .content .stit{ margin-bottom: 0; font-weight: bold; line-height: 1em;}
+footer .foot_box .right .content ul{ display: flex; flex-wrap: wrap;}
+footer .foot_box .right .content ul li{ margin-right: 30px;}
+footer .foot_box .right .content ul li a{color: var(--color-title)}
+
+footer .foot_copy{text-align: left;}
+
+
+@media only screen and (max-width: 768px){
+    footer{ padding: 60px 0;}
+    footer .foot_box{ display: block;}
+    footer .foot_box a:hover{opacity: 1; transition: 0;}
+    footer .foot_box a:hover::before{width: 0; transition: 0;}
+    footer .foot_box .left{ width: 100%;margin-bottom: 30px;}
+    footer .foot_box .left .foot_logo{width: 50vw;}
+    footer .foot_box .left .foot_logo img{width: 100%;}
+    footer .foot_box .left .foot_nav ul{ margin-bottom: 4px;}
+    footer .foot_box .left .foot_nav ul li a{ font-size: 16px;}
+    footer .foot_box .left .foot_nav ul.nav_02 li a{ font-size: 14px;}
+    footer .foot_box .left .foot_nav ul.nav_03{ display: block;}
+    footer .foot_box .left .foot_nav ul.nav_03 li a{ font-size: 12px;}
+    footer .foot_box .right{ width: 100%;}
+    footer .foot_box .right .content ul li{ margin-right: 18px;display: inline-block;font-size: 13px;}
+}
