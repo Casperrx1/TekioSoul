@@ -1,92 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>TekioSoul</title>
-    <meta name="description" content="Welcome to my test website where I play arround in HTML, CSS and JS.">
-    <meta charset="utf-8">
-<!-- Meta tag for setting the viewport -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Link to the favicon -->
-<link rel="icon" type="image/png" href="images/gawrgurasenzawaportrait.png">
-<!-- Link to the Material Icons library -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<!-- Link to custom CSS files -->
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/img.css">
-<link rel="stylesheet" href="css/nav.css">
+<html lang="en"> <!--The language of the page-->
+  <head> <!--The important links, and background tags hide here-->
+    <title>TekioSoul - A VTuber Agency</title> <!--Title that's in the tab-->
+    <meta name="description" content="TekioSoul a VTuber agency like never before."> <!--The desc in search-->
+    <meta charset="utf-8"> <!--Character encoding, includes characters from dif writing systems-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Meta tag for setting the viewport -->
+    <link rel="icon" type="image/png" href="logos/gawrgurasenzawaportrait.png"> <!-- Link to the favicon, aka the tab img -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><!-- Link to the Material Icons library-->
+    <!-- Link to custom CSS files WAS MULTIPLE KEEPS GETTING SMALLER TILL I HAVE 1 LEFT FOR SPEEEEED-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"/>
   </head>
-
 <body>
-  <!--Popup-->
-<div class="popup">
-    <div class="popup__content">
-      <div class="popup__text">
-        <strong>Reminder:</strong> This is a made up VTuber agency which I made to play around with more web dev.
-      </div>
-      <button class="popup__close" type="button">
-        <span class="material-icons">
-          close
-        </span>
-      </button>
+  <header>
+  <img class="small-logo" src="logos/" alt="Logo for small screens" > <!--small LOGO NEEDS TO BE CHANGED-->
+  <img class="logo" src="logos/TekioSoulLogo.png" alt="Logo for large screens" > <!--large LOGO-->
+  <nav>
+    <div class="topnav">
+      <div class="openMenu"><i class="fa fa-bars"></i></div>
+      <ul class="mainMenu">
+          <li><a href="#">MAIN</a></li>
+          <li><a href="#">TALENT</a></li>
+          <li><a href="#">STAFF</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <div class="closeMenu"><i class="fa fa-times"></i></div>
+          <span class="icons">
+              <i class="fab fa-youtube"></i>
+          </span>
+      </ul>
     </div>
-  </div>
-
-<header>
-  <!--LOGO-->
-  <img src="logos/TekioSoulLogo.png" alt="Logo" class="logo">
-    <!--NAVIGATION-->
-  <nav class="topnav bolded">
-    <ul>
-      <li><a href="index.html">MAIN</a></li>
-      <li class="dropdown bolded">
-        <button onclick="myFunction('groupDropdown')" class="dropbtn bolded">TALENT</button>
-        <div id="groupDropdown" class="dropdown-content">
-          <a href="hololive.html">HOLOLIVE</a>
-          <a href="#">NIJISANJI</a>
-          <a href="#">PHASE CONNECT</a>
-          <a href="#">VSHOJO</a>
-          <a href="#">VOMS</a>
-          <a href="#">PRISM PROJECT</a>
-          <a href="#">PRODUCTION KAWAII</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <button onclick="myFunction('indieDropdown')" class="dropbtn bolded">STAFF</button>
-        <div id="indieDropdown" class="dropdown-content">
-          <a href="#">AAAAaaaaaaaaa</a>
-          <a href="#">BBBBbbbb</a>
-		    </div>
-      </li>
-      <li class="dropdown">
-        <button onclick="myFunction('indieDropdown')" class="dropbtn bolded">ABOUT US</button>
-        <div id="indieDropdown" class="dropdown-content">
-          <a href="#">AAAAaaaaaaaaa</a>
-          <a href="#">BBBBbbbb</a>
-		    </div>
-      </li>
-    </ul>
-  </nav>
+  </nav> 
 </header>
-  <!--BANNER-->
-<img class="banner" src="EDITS/First BackgroundAnimeCarsALCROP.png" alt="Banner Image">
-
-  <!-- all of this to edit its the image same with CSS name banner-->
-  <section>
-         <div class="banner2" id="about">
-           <div class="banner2-description">
-             <div class="banner2-text">
-              <h1 class="banner2-title">Welcome to tekiosoul</h1>
-              <p>
-                TEKIOSOUL テキオスール is a VTube agency that specializes in managing and promoting virtual content creators on platforms like YouTube and Twitch. The agency provides support and resources to help its creators grow their audience and monetize their content. Tekiosoul also offers a range of services, such as custom avatar design, video editing, and social media management, to ensure its creators have the best possible chance of success. With a focus on quality and innovation, Tekiosoul is dedicated to helping virtual content creators achieve their full potential in the digital world.
-              </p>
-             </div>
-           </div>
-         </div>
-      </section>
+  <section> <!-- all of this to edit. It's the image same with CSS name banner-->
+     <div class="banner">
+      <img src="EDITS/First BackgroundAnimeCarsALCROP.png" alt="Example Image">
+      <div class="overlay">
+        <h1>Welcome to tekiosoul</h1>
+        <p>TEKIOSOUL テキオスール is a VTube agency that specializes in managing and promoting virtual content creators on platforms like YouTube and Twitch. The agency provides support and resources to help its creators grow their audience and monetize their content. Tekiosoul also offers a range of services, such as custom avatar design, video editing, and social media management, to ensure its creators have the best possible chance of success. With a focus on quality and innovation, Tekiosoul is dedicated to helping virtual content creators achieve their full potential in the digital world.</p>
+      </div>
+    </div>
+  </section>
   <main>
+    <h1 class="title">MEET THE NEW WAVE</h1>
     <section> <!--THIS IS THE COLUMN GRID WITH TALENT NAME PIC AND DESC-->
       <div class="even-columns">
-       <div>
+       <div class="animate-left">
       <h1 class="even-columns-title">Sora Soulia</h1>
       <img class="even-columns-img" src="EDITS/vtuber1.PNG"> 
        <P class="even-columns-text">Sora Soulia who embodies the grace and power of a sky goddess. With her charming personality and millennia of experience, She brings a unique perspective to our mortal world. Despite her age of 90000 years, she maintains a youthful spirit and exudes positivity and kindness in all her interactions. As a sky goddess, Sora Soulia has command over the elements of wind and lightning, which she can use to overcome any obstacle. Her fans Soulites are drawn to her ethereal beauty and otherworldly presence, as well as her insightful commentary on a variety of topics. Whether she's streaming gameplay or chatting with fans, Sora Soulia's wisdom and charisma are sure to captivate and inspire anyone who encounters her.</P>
@@ -101,18 +59,18 @@
          <img class="even-columns-img" src="EDITS/vtuber1.PNG"> 
          <P class="even-columns-text">Celestia Lyra the ethereal beauty and enchanting melody of the cosmos. Her name evokes the heavens and the stars with a rich and captivating sound. As a virtual personality, Celestia Lyra is known for her enchanting singing voice and her skillful playing of games. Her performances are mesmerizing and transport her fans to a realm of pure, unbridled creativity. Beyond her music, Celestia Lyra is also known for her insightful commentary on a range of topics, from Anime and gaming to pop culture. Her fans admire her for her intelligence, her talent, and her otherworldly beauty. With her celestial voice and her magnetic personality.</P>
          </div>
+      </div>
        </section>
         <!-- The main content of the page goes here -->
-    <div class="bordered-paragraph">
-      <p class="text">This is a paragraph with a border around it. I am trying to figure out what to put in this. In addition the current image for all 3 VTubers is from <a class="text" href="https://gcb384076498.booth.pm/items/4145288">BOOTH</a></p>
-    </div>
-      <div class="glow-image">
-        <img src="EDITS/First BackgroundAnimeCarsALCROP.png" alt="Rainbow six siege figures image" style="max-width: 50%">
-      </div>
+<section>
+  <h1 class="title">OUR OTHER TALENT</h1>
+  <P>A collage of the waves</P>
+  <h1 class="title">WORK WITH US</h1>
+  <p>An AUDITION and JOIN THE TEAM part</p>
+</section>
 <h1 class="title">OUR AMAZING SPONSORS</h1>
   </main>
-    <!--MOVING LOGOS MARQUEE-->
-<div class="sponsors movingimage">
+<div class="sponsors movingimage"> <!--MOVING LOGOS MARQUEE-->
   <div class="marquee movingimage">
     <img src="logos/Ayakacorporationlogo.svg" class="movingimage" alt="Ayaka corporation logo">
     <img src="logos/FIFElogo.svg" class="movingimage" alt="FIFE logo">
@@ -142,33 +100,31 @@
 </div>
   <footer>
     <div class="container">
-
       <div class="foot_box">
 
       <div class="left">
-      <a href="#" class="foot_logo"><img src="logos/TekioSoulLogo.png" alt="CyberSoul Logo"></a>
+      <a href="#" class="foot_logo"><img src="logos/TekioSoulLogo.png" alt="TekioSoul Logo"></a>
       <nav class="foot_nav">
       <ul class="nav_01">
-      <li><a href="#">ABOUT</a></li>
-      <li><a href="#">STAFF</a></li>
-      <li><a href="#" target="_blank">AUDITION<span class="ex_icon"></span></a></li>
-      <li><a href="#" target="_blank">OFFICIAL SHOP<span class="ex_icon"></span></a></li>
+      <li><a href="aboutus.html">ABOUT</a></li>
+      <li><a href="staff.html">STAFF</a></li>
+      <li><a href="audition.html" target="_blank">AUDITION<span class="ex_icon"></span></a></li>
+      <li><a href="shop.html" target="_blank">OFFICIAL SHOP<span class="ex_icon"></span></a></li>
       </ul>
       <ul class="nav_02">
         PLACE HOLDER
       </ul>
       <ul class="nav_03">
-      <li><a href="#" target="_blank">COMPANY<span class="ex_icon"></span></a></li>
-      <li><a href="#" target="_blank">PRIVACY POLICY<span class="ex_icon"></span></a></li>
-      <li><a href="#">FAQ</a></li>
+      <li><a href="company.html" target="_blank">COMPANY<span class="ex_icon"></span></a></li>
+      <li><a href="privacypolicy.html" target="_blank">PRIVACY POLICY<span class="ex_icon"></span></a></li>
+      <li><a href="faq.html">FAQ</a></li>
       </ul>
       </nav>
       </div>
 
       <div class="right">
-      
           <div class="content">
-      <p class="stit">TekioSoul - First wave - </p>
+      <p class="wave">TekioSoul - First wave - </p>
       <ul>
       <li><a href="#" target="_blank">Sora Soulia<span class="ex_icon"></span></a></li>
       <li><a href="#" target="_blank">Luminaria Nova<span class="ex_icon"></span></a></li>
@@ -176,7 +132,7 @@
       </ul>
       </div>
       <div class="content">
-      <p class="stit">TekioSoul - Second wave - </p>
+      <p class="wave">TekioSoul - Second wave - </p>
       <ul>
       <li><a href="#" target="_blank">NAME<span class="ex_icon"></span></a></li>
       <li><a href="#" target="_blank">NAME<span class="ex_icon"></span></a></li>
@@ -184,12 +140,11 @@
       </ul>
       </div>
       <div class="foot_copy">
-      <small>© 2077 TekioSoul Corp. All Rights Reserved</small>
+      <small>&copy;  2077 TekioSoul Corp. All Rights Reserved</small>
       </div>
       </div>
   </footer>
-<!-- Link to custom JavaScript files -->
-  <script src="scripts/nav.js"></script> 
-  <script src="scripts/popup.js"></script>
+  <script src="scripts/nav.js"></script> <!-- Links to JavaScript files -->
+  <script src="scripts/popup.js"></script>  
 </body>
 </html>

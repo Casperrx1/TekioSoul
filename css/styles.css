@@ -1,6 +1,8 @@
 @charset "utf-8"; 
 *{ /*applies the box-sizing property to all elements in the document to make sure that padding and borders are included in the element's total width and height.*/
   box-sizing: border-box; /*The box-sizing property isn't supported in IE6 and IE7.*/
+  margin: 0px;
+  padding: 0px;
 } 
 :root{ /*defines the root element kindoff like html bellow but higher priority*/
 --font_01:sans-serif;
@@ -41,16 +43,13 @@ main { /*defines the styling for the main element, including the padding*/
 section { /*defines the styling for the section, font - only used right now for the img with text over it might delete*/
   font-family: var(--font_01);
 }
-.logo {
-  width: auto;
-  height: 60px;
-  margin-right: 10px;
-  position: fixed;
-  top: 1%;
-  left: 1%;
-  z-index: 990;
+img { /*defines the styling for images*/
+  overflow-clip-margin: content-box;
+  overflow: clip;
 }
-
+p {
+  color: var(--color-white);
+}
 
 .bolded { /*BOLDED*/
   font-weight: bold; 
@@ -59,128 +58,11 @@ section { /*defines the styling for the section, font - only used right now for 
   color: var(--color-title);
   text-align: center;
 }
-.banner {
-  width: 100%;
-}
 .text{
   color: var(--color-line);
 }
 
 
-.topnav { /*defines the styling for the navigation bar, color, border, font, size*/
-  position: fixed;
-  top: 1%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50px;
-  z-index: 990;
-  font-family: Arial, sans-serif;
-  border: 2px solid white;
-  }
-  .topnav ul { /*defines the styling for the navigation bar, padding, more*/
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  }
-  .topnav li { /*defines the styling for the navigation bar, position*/
-  position: relative;
-  }
-  .topnav a { /*defines the styling for the navigation bar, color, text,*/
-  display: block;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 16px 16px;
-  text-decoration: none;
-  }
-  .topnav li a:hover:not(.active) { /*defines the styling for the navigation bar, hover color*/
-  background-color: #2980B9;
-  }
-  .dropdown { /*defines the styling for the navigation dropdown,*/
-  position: relative;
-  display: inline-block;
-  }
-  .dropbtn {
-  background-color: #ff00d400;
-  color: rgb(0, 0, 0);
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  }
-  .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 1px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 10px;
-  opacity: 0.8;
-  }
-  .dropdown-content a {
-  color: black;
-  padding: 5px 5px;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  }
-  .dropdown-content a:hover {
-  background-color: #2980B9;
-  }
-  .show {
-  display:block;
-  }
-
-
-/*START auto-resize nav*/
-@media (max-width: 600px) { /* CSS for auto-resizing navigation menu */
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  nav li {
-    flex: 1;
-    text-align: center;
-  }
-  
-  nav a {
-    padding: 1em;
-  }
-}
-@media screen and (max-width: 768px) {
-  /* Adjust the layout for small screens */
-  .banner2-title {
-    font-size: 4em;
-  }
-  
-  .banner2-text p {
-    width: 100%;
-  }
-  
-  /* Hide the logo on small screens */
-  .logo {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  /* Adjust the font sizes for smaller screens */
-  .banner2-title {
-    font-size: 3em;
-  }
-  
-  .banner2-text p {
-    font-size: 1em;
-  }
-}
-/*END auto-resize nav*/
 
 
 .popup {   /* CSS for popup */
@@ -211,81 +93,182 @@ section { /*defines the styling for the section, font - only used right now for 
 }
 
 
-.banner2 {   /* CSS for banner2 */
-  height: 650px;
-  background: url("https://spaces.w3schools.com/images/HVYepJYeHdQ.jpg") ;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: #000015;
+.logo {
+  width: auto;
+  height: 60px;
+  margin-right: 10px;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  z-index: 990;
 }
-.banner2-description {
-  height: 650px;
-  background-color: rgba(0, 0, 21, .7);
-  display: flex;
+.small-logo {
+  width: auto;
+  height: 40px;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  z-index: 990;
 }
-.banner2-text {
-  width: 70% !important;
-  margin: auto !important;
-  display: flex;
-  flex-wrap: wrap;
+.small-logo { /* Hide the small logo by default */
+  display: none;
 }
-.banner2-text p {
-  color: white;
-  width: 50%;
+@media (max-width: 1400px) { /* Hide the large logo when the screen size is less than 1400px */
+  .logo {
+    display: none;
+  }
+  .small-logo {  /* Show the small logo when the screen size is less than 1400px */
+    display: block;
+  }
+}
+
+
+.topnav {
+    color: white;
+    border-radius: 50px;
+    position: fixed;
+    top: 1%;
+    z-index: 990;
+    left: 90%;
+  }
+  .topnav .mainMenu {
+    background: rgb(0, 0, 0, 0.500);
+    color: white;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--color-title);
+    border-radius: 50px;
+    position: fixed;
+    top: 1%;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: auto;
+    list-style: none;
+    padding: 0px 22px;
+  }
+  .topnav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: 0.2s ease;
+  }
+  .topnav .mainMenu li a:hover {
+    background: var(--color-primary);
+  }
+  .topnav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+  }
+  .topnav .mainMenu .closeMenu,
+  .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+  .fa-youtube:hover {
+    color: rgb(255, 123, 0);
+  }
+  @media (max-width: 800px) {
+    .topnav .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: var(--color-primary);
+      transition: top 1s ease 0s;
+      display: none;
+      transform: translateX(0);
+      border-radius: 0px;
+    }
+    .topnav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .topnav .openMenu {
+      display: block;
+    }
+    .topnav .mainMenu li a:hover {
+      background: none;
+      color: rgb(255, 123, 0);
+    }
+    .icons i {
+      display: inline-block;
+      padding: 12px;
+    }
+  }
+
+
+  .banner {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+  }
+  .banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+  }
+  .overlay h1 {
+    font-size: 36px;
+    margin: 0;
   
+    animation: fadeIn 3s;
+    color: var(--color-title);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 80px;
+  }
+  .overlay p {
+    font-size: 18px;
+    color: var(--color-white);
+  }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
-.banner2-title {
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 80px;
-  color: orange;
+
+
+.even-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /*This is the sizing for the column grid it uses fractions*/
+  margin-inline: auto;
+  padding-block: 0rem;
+  width: min(95%, 70rem);
+  gap: 2rem;
+}
+.even-columns-title{
+  font-family: var(--font_01);
   text-align: center;
+  color: var(--color-title);
 }
-
-
-.bordered-paragraph {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  animation: glow 5s infinite;
+.even-columns-text{
+  font-family: var(--font_01);
+  text-align: justify;
+  color: var(--color-white);
 }
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5),
-                0 0 20px rgba(255, 0, 0, 0.4),
-                0 0 30px rgba(255, 0, 0, 0.3),
-                0 0 40px rgba(255, 0, 0, 0.2),
-                0 0 50px rgba(255, 0, 0, 0.1);
-  }
-  25% {
-    box-shadow: 0 0 20px rgba(255, 255, 0, 0.5),
-                0 0 30px rgba(255, 255, 0, 0.4),
-                0 0 40px rgba(255, 255, 0, 0.3),
-                0 0 50px rgba(255, 255, 0, 0.2),
-                0 0 60px rgba(255, 255, 0, 0.1);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5),
-                0 0 40px rgba(0, 255, 0, 0.4),
-                0 0 50px rgba(0, 255, 0, 0.3),
-                0 0 60px rgba(0, 255, 0, 0.2),
-                0 0 70px rgba(0, 255, 0, 0.1);
-  }
-  75% {
-    box-shadow: 0 0 40px rgba(0, 0, 255, 0.5),
-                0 0 50px rgba(0, 0, 255, 0.4),
-                0 0 60px rgba(0, 0, 255, 0.3),
-                0 0 70px rgba(0, 0, 255, 0.2),
-                0 0 80px rgba(0, 0, 255, 0.1);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5),
-                0 0 20px rgba(255, 0, 0, 0.4),
-                0 0 30px rgba(255, 0, 0, 0.3),
-                0 0 40px rgba(255, 0, 0, 0.2),
-                0 0 50px rgba(255, 0, 0, 0.1);
-  }
+.even-columns-img{
+ align-content: center;
+ max-width: 100%;
 }
 
 
@@ -315,63 +298,6 @@ section { /*defines the styling for the section, font - only used right now for 
   width: 8rem;
   height: 3.5rem;
   margin: 0 2rem;
-}
-
-
-.glow-image { /*Glow arround image*/
-  display: inline-block;
-  position: relative;
-}
-.glow-image:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  border-radius: 10px;
-  animation: glow2 2s linear infinite;
-}
-.glow-image img {
-  display: block;
-  width: auto;
-  height: auto;
-}
-@keyframes glow2 {
-  0% {
-    box-shadow: 0 0 10px #ff0000,
-                0 0 20px #ff7700,
-                0 0 30px #ffd500,
-                0 0 40px #aaff00,
-                0 0 50px #00ff55,
-                0 0 60px #00aaff,
-                0 0 70px #1700ff,
-                0 0 80px #8a00ff,
-                0 0 90px #ff00ee;
-  }
-  50% {
-    box-shadow: 0 0 5px #ff0000,
-                0 0 10px #ff7700,
-                0 0 15px #ffd500,
-                0 0 20px #aaff00,
-                0 0 25px #00ff55,
-                0 0 30px #00aaff,
-                0 0 35px #1700ff,
-                0 0 40px #8a00ff,
-                0 0 45px #ff00ee;
-  }
-  100% {
-    box-shadow: 0 0 10px #ff0000,
-                0 0 20px #ff7700,
-                0 0 30px #ffd500,
-                0 0 40px #aaff00,
-                0 0 50px #00ff55,
-                0 0 60px #00aaff,
-                0 0 70px #1700ff,
-                0 0 80px #8a00ff,
-                0 0 90px #ff00ee;
-  }
 }
 
 
@@ -467,7 +393,7 @@ footer .foot_box .right .content{
   padding: 20px 0 12px;
   font-size: 14px;
 }
-footer .foot_box .right .content .stit{
+footer .foot_box .right .content .wave{
   margin-bottom: 0;
   font-weight: bold;
   line-height: 1em;
@@ -503,28 +429,4 @@ footer .foot_copy{
 }
 
 
-.even-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /*This is the sizing for the column grid it uses fractions*/
-  margin-inline: auto;
-  padding-block: 2rem;
-  width: min(95%, 70rem);
-  gap: 2rem;
-}
-
-.even-columns-title{
-  font-family: var(--font_01);
-  text-align: center;
-  color: var(--color-title);
-}
-
-.even-columns-text{
-  font-family: var(--font_01);
-  text-align: justify;
-  color: var(--color-white);
-}
-
-.even-columns-img{
- align-content: center;
- max-width: 100%;
-}
+/*TEST AREA BELLOW*/
