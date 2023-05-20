@@ -23,3 +23,8 @@ const mainMenu = document.querySelector('.mainMenu');
     function close(){
         mainMenu.style.top = '-100%';
     }
+
+
+
+
+ /*this not work */

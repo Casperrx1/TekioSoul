@@ -28,10 +28,10 @@ body { /*defines the styling for the body element, including the background colo
 	font-size: 16px;
 	height: 100%;
 }
-main { /*defines the styling for the main element, including the padding*/
+/* main { defines the styling for the main element, including the padding 
   padding-left: 5%;
   padding-right: 5%;
-}
+}*/
 .header { /*defines the styling for the header, IT DOES NOT DO ANYTHING FOR NOW AND I AM NOT TAKING IT OUT FOR THE SECOND*/
   background-color: var(--color-primary);
   text-align: center;
@@ -51,18 +51,20 @@ p {
   color: var(--color-white);
 }
 
+
 .bolded { /*BOLDED*/
   font-weight: bold; 
 }
 .title {
   color: var(--color-title);
   text-align: center;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .text{
   color: var(--color-line);
 }
-
-
 
 
 .popup {   /* CSS for popup */
@@ -165,7 +167,7 @@ p {
     cursor: pointer;
   }
   .topnav .mainMenu .closeMenu,
-  .icons i {
+  .icons i { /*For the icons in the mobile top nav menu opne and close*/
     font-size: 2rem;
     display: none;
     cursor: pointer;
@@ -229,23 +231,47 @@ p {
     padding: 20px;
   }
   .overlay h1 {
-    font-size: 36px;
     margin: 0;
-  
     animation: fadeIn 3s;
     color: var(--color-title);
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 80px;
+    font-size: 70px;
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @media (max-width: 1400px) {
+    .overlay h1 {
+      font-size: 36px;
+    }
   }
   .overlay p {
     font-size: 18px;
     color: var(--color-white);
   }
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
+  @media (max-width: 1400px) {
+    .overlay p {
+      font-size: 16px;
+    }
+  }
+  @media only screen and (max-width: 1024px) { /*Moves the overlay down to fit well on smaller screens*/
+    .overlay {
+      position: static;
+      transform: none;
+      text-align: left;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+  }
 
 
 .even-columns {
@@ -260,17 +286,92 @@ p {
   font-family: var(--font_01);
   text-align: center;
   color: var(--color-title);
+  padding-bottom: 5px;
 }
 .even-columns-text{
   font-family: var(--font_01);
   text-align: justify;
   color: var(--color-white);
+  font-size: 16px ;
 }
 .even-columns-img{
  align-content: center;
  max-width: 100%;
 }
+@media only screen and (max-width: 830px) {/*Makes the columns stack to fit well on mobile*/
+  .even-columns {
+    display: block ;
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+  .even-columns > div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .even-columns-title{
+    font-size: 25px;
+  }
+  .even-columns-img{
+    max-width: 50%;
+    margin: 0 auto;
+    justify-content: center; /* Added property */
+    display: flex;
+    margin-bottom: 5px;
+   }
+}
 
+
+.join-card {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  background: rgb(56, 56, 56);
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.card-left {
+  flex: 0.4;
+  padding: 20px;
+}
+.card-left h1 {
+  font-size: 1.5em;
+}
+.card-left p {
+  margin-top: 20px;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+.card-right { /*This is for the img and hover animation*/
+  flex: 0.6;
+  height: 100%;
+  position: relative;
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: all .2s ease-in-out; 
+  overflow: hidden;
+}
+.card-right:hover { 
+    transform: scale(1.1); 
+}
+@media only screen and (max-width: 1024px){
+ .card {
+  max-height: 300px;
+ }
+}
+@media only screen and (max-width: 425px){
+  .card {
+   max-height: 400px;
+  }
+  .card-right img {
+    height: 400px;
+    width: auto;
+  }
+ }
 
 @keyframes marquee { /*marquee aka the logos animated bar BROKEN ON LOOP CAN'T FIGURE OUT FOX AT THE TIME*/
 0% {
@@ -301,15 +402,12 @@ p {
 }
 
 
-.container{ /*THIS IS IN THE FOOTER RIGHT NOW*/
+.footer{ /*THIS IS IN THE FOOTER RIGHT NOW*/
   max-width:1100px; 
   width: 90%; 
   margin: 0 auto;
 }
-#container{
-  overflow-x: hidden;
-}
-a { /*This does the footer animation I THINK NEED TO CHECK*/
+a { /*This deletes underline in Links and ads hover transition  */
   color: #000;
   text-decoration: none;
   outline:none;
@@ -323,16 +421,16 @@ footer{
   color: #fff;padding: 20px 0;
   line-height: 2em;
 }
-footer .foot_box{ 
+footer .footer-box{ 
   display: flex; 
   justify-content: space-between; 
   margin-bottom: 60px;
 }
-footer .foot_box a{
+footer .footer-box a{
   position: relative; 
   transition: .3s;
 }
-footer .foot_box a::before{
+footer .footer-box a::before{
   position: absolute; 
   content: ''; 
   width: 0; 
@@ -342,91 +440,96 @@ footer .foot_box a::before{
   background-color: var(--color-white); 
   transition: .3s;
 }
-footer .foot_box a:hover{
+footer .footer-box a:hover{
   opacity: .7; 
   transition: .3s;
 }
-footer .foot_box a:hover::before{
+footer .footer-box a:hover::before{
   width: 100%; 
   transition: .3s;
 }
-footer .foot_box a.foot_logo::before{
+footer .footer-box a.footer-logo::before{
   content: none;
 }
-footer .foot_box .left{
+footer .footer-box .footer-left{
   width: 50%; 
   text-align: left;
 }
-footer .foot_box .left .foot_logo{ 
+footer .footer-box .footer-left .footer-logo{ 
   display: block; 
   line-height: 0; 
   margin-bottom: 40px;
   max-width: 200px;
 }
-footer .foot_box .left .foot_nav ul{
+footer .footer-box .footer-left .footer-logo img {
+  max-width: 400px;
+}
+footer .footer-box .footer-left .footer-nav ul{
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
-footer .foot_box .left .foot_nav ul li{
+footer .footer-box .footer-left .footer-nav ul li{
   margin-right: 1em; 
   display: inline-block;
 }
-footer .foot_box .left .foot_nav ul li a{ 
+footer .footer-box .footer-left .footer-nav ul li a{ 
   color: var(--color-white);
   font-size: 20px;
   font-weight: bold;
 }
-footer .foot_box .left .foot_nav ul.nav_02 li a{
+footer .footer-box .footer-left .footer-nav ul.nav_02 li a{
   font-size: 16px;
 }
-footer .foot_box .left .foot_nav ul.nav_03 li a{
+footer .footer-box .footer-left .footer-nav ul.nav_03 li a{
   font-size: 14px;
   font-weight: 400;
 }
-footer .foot_box .right{
+footer .footer-box .footer-right{
   width: 40%;
   text-align: left;
 }
-footer .foot_box .right .content{
+footer .footer-box .footer-right .content{
   border-bottom: 1px solid #fff;
   padding: 20px 0 12px;
   font-size: 14px;
 }
-footer .foot_box .right .content .wave{
+footer .footer-box .footer-right .content .wave{
   margin-bottom: 0;
   font-weight: bold;
   line-height: 1em;
 }
-footer .foot_box .right .content ul{
+footer .footer-box .footer-right .content ul{
   display: flex;
   flex-wrap: wrap;
 }
-footer .foot_box .right .content ul li{
+footer .footer-box .footer-right .content ul li{
   margin-right: 30px;
 }
-footer .foot_box .right .content ul li a{
+footer .footer-box .footer-right .content ul li a{
   color: var(--color-title)
 }
-footer .foot_copy{
+footer .footer-copy{
   text-align: left;
 }
 @media only screen and (max-width: 768px){
     footer{ padding: 60px 0;}
-    footer .foot_box{ display: block;}
-    footer .foot_box a:hover{opacity: 1; transition: 0;}
-    footer .foot_box a:hover::before{width: 0; transition: 0;}
-    footer .foot_box .left{ width: 100%;margin-bottom: 30px;}
-    footer .foot_box .left .foot_logo{width: 50vw;}
-    footer .foot_box .left .foot_logo img{width: 100%;}
-    footer .foot_box .left .foot_nav ul{ margin-bottom: 4px;}
-    footer .foot_box .left .foot_nav ul li a{ font-size: 16px;}
-    footer .foot_box .left .foot_nav ul.nav_02 li a{ font-size: 14px;}
-    footer .foot_box .left .foot_nav ul.nav_03{ display: block;}
-    footer .foot_box .left .foot_nav ul.nav_03 li a{ font-size: 12px;}
-    footer .foot_box .right{ width: 100%;}
-    footer .foot_box .right .content ul li{ margin-right: 18px;display: inline-block;font-size: 13px;}
+    footer .footer-box{ display: block;}
+    footer .footer-box a:hover{opacity: 1; transition: 0;}
+    footer .footer-box a:hover::before{width: 0; transition: 0;}
+    footer .footer-box .footer-left{ width: 100%;margin-bottom: 30px;}
+    footer .footer-box .footer-left .footer-logo{width: 50vw;}
+    footer .footer-box .footer-left .footer-logo img{width: 100%;}
+    footer .footer-box .footer-left .footer-nav ul{ margin-bottom: 4px;}
+    footer .footer-box .footer-left .footer-nav ul li a{ font-size: 16px;}
+    footer .footer-box .footer-left .footer-nav ul.nav_02 li a{ font-size: 14px;}
+    footer .footer-box .footer-left .footer-nav ul.nav_03{ display: block;}
+    footer .footer-box .footer-left .footer-nav ul.nav_03 li a{ font-size: 12px;}
+    footer .footer-box .footer-right{ width: 100%;}
+    footer .footer-box .footer-right .content ul li{ margin-right: 18px;display: inline-block;font-size: 13px;}
 }
+
+
 
 
 /*TEST AREA BELLOW*/
