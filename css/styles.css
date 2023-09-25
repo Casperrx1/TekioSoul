@@ -65,7 +65,11 @@ p {
 .text{
   color: var(--color-line);
 }
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .popup {   /* CSS for popup */
   background: #009579;
@@ -320,16 +324,25 @@ p {
    }
 }
 
+.othertalent img {
+  display: block;
+  height: auto;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .join-card {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  max-height: 300px;
 }
 .card {
   width: 100%;
-  height: 500px;
+  height: 300px;
   display: flex;
   background: rgb(56, 56, 56);
   box-sizing: border-box;
@@ -355,6 +368,10 @@ p {
   transition: all .2s ease-in-out; 
   overflow: hidden;
 }
+.card-right img {
+  max-height: 150%;
+  max-width: 100%;
+}
 .card-right:hover { 
     transform: scale(1.1); 
 }
@@ -363,13 +380,16 @@ p {
   max-height: 300px;
  }
 }
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 930px){
   .card {
-   max-height: 400px;
+   max-height: 300px;
   }
   .card-right img {
-    height: 400px;
+    height: 350px;
     width: auto;
+  }
+  .join-card {
+    width: 90%;
   }
  }
 

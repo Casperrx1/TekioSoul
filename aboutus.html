@@ -1,75 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>TekioSoul</title>
-    <meta name="description" content="Welcome to my test website where I play arround in HTML, CSS and JS.">
-    <meta charset="utf-8">
-<!-- Meta tag for setting the viewport -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Link to the favicon -->
-<link rel="icon" type="image/png" href="images/gawrgurasenzawaportrait.png">
-<!-- Link to the Material Icons library -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<!-- Link to custom CSS files -->
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/img.css">
-  </head>
-
-<body>
-  <!--Popup-->
-<div class="popup">
-    <div class="popup__content">
-      <div class="popup__text">
-        <strong>Reminder:</strong> This is a made up VTuber agency which I made to play around with more web dev.
-      </div>
-      <button class="popup__close" type="button">
-        <span class="material-icons">
-          close
-        </span>
-      </button>
+<html lang="en"> <!--The language of the page-->
+ <head> <!--The important links, and background tags hide here-->
+    <title>TekioSoul - A VTuber Agency</title> <!--Title that's in the tab-->
+    <meta name="description" content="TekioSoul a VTuber agency like never before."> <!--The desc in search-->
+    <meta charset="utf-8"> <!--Character encoding, includes characters from dif writing systems-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Meta tag for setting the viewport -->
+    <link rel="icon" type="image/png" href="logos/gawrgurasenzawaportrait.png"> <!-- Link to the favicon, aka the tab img -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><!-- Link to the Material Icons library-->
+    <!-- Link to custom CSS files WAS MULTIPLE KEEPS GETTING SMALLER TILL I HAVE 1 LEFT FOR SPEEEEED-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+ </head>
+ <body>
+  <div class="popup">
+  <div class="popup__content">
+    <div class="popup__text">
+      <strong>Reminder:</strong> This is a made up VTuber agency which I made to play around with more web dev.
     </div>
+    <button class="popup__close" type="button">
+      <span class="material-icons">
+        close
+      </span>
+    </button>
   </div>
-
-<header>
-  <!--LOGO-->
-  <img src="logos/TekioSoulLogo.png" alt="Logo" class="logo">
-    <!--NAVIGATION-->
-  <nav class="topnav bolded">
-    <ul>
-      <li><a href="index.html">MAIN</a>
-    </li>
-        <li><a href="talent.html">TALENT</a>
-    </li>
-      <li><a href="staff.html">STAFF</a>
-    </li>
-      <li><a href="aboutus.html">ABOUT US</a>
-    </li>
-    </ul>
-  </nav>
-</header>
-  <!--BANNER-->
-<img class="banner" src="EDITS/First BackgroundAnimeCarsALCROP.png" alt="Banner Image">
-
-  <!-- all of this to edit its the image same with CSS name banner-->
-  <section>
-         <div class="banner2" id="about">
-           <div class="banner2-description">
-             <div class="banner2-text">
-              <h1 class="banner2-title">Welcome to tekiosoul</h1>
-              <p>
-                TEKIOSOUL テキオスール is a VTube agency that specializes in managing and promoting virtual content creators on platforms like YouTube and Twitch. The agency provides support and resources to help its creators grow their audience and monetize their content. Tekiosoul also offers a range of services, such as custom avatar design, video editing, and social media management, to ensure its creators have the best possible chance of success. With a focus on quality and innovation, Tekiosoul is dedicated to helping virtual content creators achieve their full potential in the digital world.
-              </p>
-             </div>
-           </div>
-         </div>
-      </section>
+  </div>
+  <header>
+   <img class="small-logo" src="logos/gawrgurasenzawaportrait.png" alt="Logo for small screens" > <!--small LOGO NEEDS TO BE CHANGED-->
+   <img class="logo" src="logos/TekioSoulLogo.png" alt="Logo for large screens" > <!--large LOGO-->
+   <nav>
+    <div class="topnav">
+      <div class="openMenu"><i class="fa fa-bars"></i></div>
+       <ul class="mainMenu">
+        <li><a href="index.html">MAIN</a></li>
+        <li><a href="talent.html">TALENT</a></li>
+        <li><a href="staff.html">STAFF</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <div class="closeMenu"><i class="fa fa-times"></i></div>
+        <span class="icons">
+              <i class="fab fa-youtube"></i>
+        </span>
+       </ul>
+     </div>
+   </nav> 
+   <div class="banner"><!-- all of this to edit. It's the image same with CSS name banner-->
+    <img src="EDITS/First BackgroundAnimeCarsALCROP.png" alt="Example Image">
+    <div class="overlay">
+      <h1>Welcome to tekiosoul</h1>
+      <p>TEKIOSOUL テキオスール is a VTube agency that specializes in managing and promoting virtual content creators on platforms like YouTube and Twitch. The agency provides support and resources to help its creators grow their audience and monetize their content. Tekiosoul also offers a range of services, such as custom avatar design, video editing, and social media management, to ensure its creators have the best possible chance of success. With a focus on quality and innovation, Tekiosoul is dedicated to helping virtual content creators achieve their full potential in the digital world.</p>
+    </div>
+   </div>
+  </header>
   <main>
-CTRL+K CTR+0 FOLDS ALL
-CTRL+K CTRL+J OPENS ALL
+ 
   </main>
-  <h1 class="title">OUR AMAZING SPONSORS</h1>
-    <!--MOVING LOGOS MARQUEE-->
-<div class="sponsors movingimage">
+  <div class="sponsors movingimage"> <!--MOVING LOGOS MARQUEE-->
   <div class="marquee movingimage">
     <img src="logos/Ayakacorporationlogo.svg" class="movingimage" alt="Ayaka corporation logo">
     <img src="logos/FIFElogo.svg" class="movingimage" alt="FIFE logo">
@@ -96,15 +80,13 @@ CTRL+K CTRL+J OPENS ALL
     <img src="logos/JuliiInclogo.svg" class="movingimage" alt="Julii Inc logo">
     <img src="logos/swagglogo.svg" class="movingimage" alt="Swagg logo">
   </div>
-</div>
+  </div>
   <footer>
-    <div class="container">
-
-      <div class="foot_box">
-
-      <div class="left">
-      <a href="#" class="foot_logo"><img src="logos/TekioSoulLogo.png" alt="TekioSoul Logo"></a>
-      <nav class="foot_nav">
+    <div class="footer">
+      <div class="footer-box">
+      <div class="footer-left">
+      <a href="#" class="footer-logo"><img src="logos/TekioSoulLogo.png" alt="TekioSoul Logo"></a>
+      <nav class="footer-nav">
       <ul class="nav_01">
       <li><a href="aboutus.html">ABOUT</a></li>
       <li><a href="staff.html">STAFF</a></li>
@@ -112,7 +94,7 @@ CTRL+K CTRL+J OPENS ALL
       <li><a href="shop.html" target="_blank">OFFICIAL SHOP<span class="ex_icon"></span></a></li>
       </ul>
       <ul class="nav_02">
-        PLACE HOLDER
+       
       </ul>
       <ul class="nav_03">
       <li><a href="company.html" target="_blank">COMPANY<span class="ex_icon"></span></a></li>
@@ -121,9 +103,7 @@ CTRL+K CTRL+J OPENS ALL
       </ul>
       </nav>
       </div>
-
-      <div class="right">
-      
+      <div class="footer-right">
           <div class="content">
       <p class="wave">TekioSoul - First wave - </p>
       <ul>
@@ -140,13 +120,12 @@ CTRL+K CTRL+J OPENS ALL
       <li><a href="#" target="_blank">NAME<span class="ex_icon"></span></a></li>
       </ul>
       </div>
-      <div class="foot_copy">
-      <small>© 2077 TekioSoul Corp. All Rights Reserved</small>
+      <div class="footer-copy">
+      <small>&copy;  2077 TekioSoul Corp. All Rights Reserved</small>
       </div>
       </div>
   </footer>
-<!-- Link to custom JavaScript files -->
-  <script src="scripts/nav.js"></script> 
-  <script src="scripts/popup.js"></script>
-</body>
+  <script src="scripts/nav.js" ></script>
+  <script src="scripts/popup.js"></script>  
+ </body>
 </html>
