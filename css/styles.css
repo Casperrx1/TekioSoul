@@ -599,3 +599,7 @@ footer .footer-copy{
 .collapsible-faq-content.closed {
   border-top: none;/* Remove the border when content is closed */
 }
+
+.blacktext-faq {
+  color: var(--color-primary);
+}
