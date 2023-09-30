@@ -332,7 +332,6 @@ p {
   margin-right: auto;
 }
 
-
 .join-card {
   width: 80%;
   margin: 0 auto;
@@ -553,3 +552,50 @@ footer .footer-copy{
 
 
 /*TEST AREA BELLOW*/
+
+
+.collapsible-faq {
+  /* Style the button that is used to open and close the collapsible content */
+  background: var(--color-title);
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 18px;
+  width: 30%;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #9e355d;
+  border-radius: 25px;
+  transition: border-radius 1s; /* Add a transition for border-radius */
+}
+
+.collapsible-faq.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+  transition: none; /* Disable transition when open */
+}
+
+.collapsible-faq-content {
+  padding: 0 18px;
+  background-color: var(--color-title);
+  max-height: 0;
+  width: 30%;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1%;
+  border: #f3c436;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top: none;
+}
+
+.collapsible-faq-content.closed {
+  border-top: none;/* Remove the border when content is closed */
+}

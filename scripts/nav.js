@@ -27,4 +27,4 @@ const mainMenu = document.querySelector('.mainMenu');
 
 
 
- /*this not work */
+

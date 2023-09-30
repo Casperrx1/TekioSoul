@@ -51,9 +51,22 @@
    </div>
   </header>
   <main>
-
-    <h1 class="title">AUDITION</h1>
- 
+    <h1 class="title">FAQ</h1>
+     <button type="button" class="collapsible-faq">What's a VTuber?</button>
+      <div class="collapsible-faq-content">
+       <p class="blacktext-faq">VTubers (Virtual YouTubers) are creators that use motion-captured avatars to create content. VTubers represent the future of content creation by giving anyone the opportunity to shine without the IRL cultural and physical barriers that traditionally defines entertainers. Only their imagination and creativity are needed to carve out the identity they wish to reflect and we support this new breed of influencers.</p>
+      </div>
+     <button type="button" class="collapsible-faq">What makes us Talent First? </button>
+      <div class="collapsible-faq-content">
+        <p class="blacktext-faq">We listen to our talent's feedback, work hard to achieve their dreams, and have them keep their IP.
+      </div>
+     <button type="button" class="collapsible-faq">Can I create fanart and sell it?</button>
+      <div class="collapsible-faq-content">
+       <p class="blacktext-faq" style="text-align:center;">YES 
+       </div>
+     <button type="button" class="collapsible-faq">Can I clip and upload streams?</button>
+      <div class="collapsible-faq-content">
+       <p class="blacktext-faq">Yes! Please link our talent's socials at the top of your description. Do NOT take things out of context that will paint TEKIOSOUL or talent in a bad light. Moments that are negative to the talent or TEKIOSOUL are NOT ok to clip. Do NOT mislead with your titles. You ARE allowed to monetize! Still know that we reserve the right to take down anything as we see fit and will pursue legal action to the fullest extent of the law where necessary.</div>
   </main>
   <div class="sponsors movingimage"> <!--MOVING LOGOS MARQUEE-->
   <div class="marquee movingimage">
@@ -128,6 +141,58 @@
       </div>
   </footer>
   <script src="scripts/nav.js" ></script>
-  <script src="scripts/popup.js"></script>  
+  <script src="scripts/popup.js"></script>
+  <script>
+var coll = document.getElementsByClassName("collapsible-faq");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    var self = this; // Store a reference to the clicked element
+    if (!this.classList.contains("collapsing")) {
+      // Check if it's not currently collapsing or expanding
+      this.classList.add("collapsing"); // Add a class to indicate the element is in transition
+
+      self.classList.toggle("active");
+      var content = self.nextElementSibling;
+      if (content.style.maxHeight) {
+        // If the content is open, close it
+        content.style.maxHeight = null;
+        self.classList.remove("open"); // Remove the 'open' class
+        content.style.border = "none"; // Remove the border when closing
+        self.classList.add("closed"); // Add a class to indicate that the content is closed
+      } else {
+        // Open the content immediately
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.border = "2px solid #9e355d"; // Add the border when opening, customize the color as needed
+        content.style.borderTop = "none"; // Remove top border
+        self.classList.remove("closed"); // Remove the class indicating that the content is closed
+        self.classList.add("open"); // Add the 'open' class
+      }
+
+      // Remove the 'collapsing' class immediately
+      self.classList.remove("collapsing");
+    }
+  });
+}
+
+// Add a click event listener to the document body
+document.body.addEventListener("click", function(event) {
+  var clickedElement = event.target;
+  if (!clickedElement.closest(".collapsible-faq")) {
+    // Clicked element is not inside a collapsible-faq, so close all open collapsible elements
+    var openCollapsibles = document.querySelectorAll(".collapsible-faq.active");
+    for (var j = 0; j < openCollapsibles.length; j++) {
+      var openContent = openCollapsibles[j].nextElementSibling;
+      openCollapsibles[j].classList.remove("active");
+      openContent.style.maxHeight = null;
+      openCollapsibles[j].classList.remove("open"); // Remove the 'open' class
+      openContent.style.border = "none"; // Remove the border when closing
+      openCollapsibles[j].classList.add("closed"); // Add a class to indicate that the content is closed
+    }
+  }
+});
+
+  </script>
  </body>
 </html>
