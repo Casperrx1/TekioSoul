@@ -7,3 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Meta tag for setting the viewport -->
     <link rel="icon" type="image/png" href="IMAGE LINK"> <!-- Link to the favicon, aka the tab img -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><!-- Link to the Material Icons library-->
+
+ OLD ANGLED JOIN US THING
+
+              <h1 class="title">WORK WITH US</h1>
+          <div class="join-card"> <!--This is the angled work with us card-->
+            <div class="card">
+              <div class="card-left">
+                <h1>JOIN OUR TEAM</h1>
+                <p>
+                  We are always looking for talented individuals to join our team. Visit our Career Opportunities page to learn more about current job openings and internships at TekioSoul.
+                </p>
+                <p>
+                  MORE TO BE ADDED AND ENHANCED
+                </p>
+              </div>
+              <div class="card-right">
+                <img src="images/Office.jpg" alt="Image description" max width="100%">
+              </div>
+            </div>
+           </div>
+        </section>
+        
+        .join-card {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  max-height: 300px;
+}
+.card {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  background: rgb(56, 56, 56);
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.card-left {
+  flex: 0.4;
+  padding: 20px;
+}
+.card-left h1 {
+  font-size: 1.5em;
+}
+.card-left p {
+  margin-top: 20px;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+.card-right { /*This is for the img and hover animation*/
+  flex: 0.6;
+  height: 100%;
+  position: relative;
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: all .2s ease-in-out; 
+  overflow: hidden;
+}
+.card-right img {
+  max-height: 150%;
+  max-width: 100%;
+}
+.card-right:hover { 
+    transform: scale(1.1); 
+}
+@media only screen and (max-width: 1024px){
+ .card {
+  max-height: 300px;
+ }
+}
+@media only screen and (max-width: 930px){
+  .card {
+   max-height: 300px;
+  }
+  .card-right img {
+    height: 350px;
+    width: auto;
+  }
+  .join-card {
+    width: 90%;
+  }
+ }

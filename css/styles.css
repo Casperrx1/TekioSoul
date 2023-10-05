@@ -215,6 +215,7 @@ p {
     }
   }
 
+/*  BANNER  */
 
   .banner {
     position: relative;
@@ -277,6 +278,7 @@ p {
     }
   }
 
+/*  EVEN IMAGE COLUMNS @Index  */
 
 .even-columns {
   display: grid;
@@ -324,6 +326,8 @@ p {
    }
 }
 
+/*  OTHER TALENT IMAGE @Index  */
+
 .othertalent img {
   display: block;
   height: auto;
@@ -332,65 +336,7 @@ p {
   margin-right: auto;
 }
 
-.join-card {
-  width: 80%;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
-  max-height: 300px;
-}
-.card {
-  width: 100%;
-  height: 300px;
-  display: flex;
-  background: rgb(56, 56, 56);
-  box-sizing: border-box;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
-.card-left {
-  flex: 0.4;
-  padding: 20px;
-}
-.card-left h1 {
-  font-size: 1.5em;
-}
-.card-left p {
-  margin-top: 20px;
-  font-size: 0.9em;
-  font-weight: 300;
-}
-.card-right { /*This is for the img and hover animation*/
-  flex: 0.6;
-  height: 100%;
-  position: relative;
-  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
-  transition: all .2s ease-in-out; 
-  overflow: hidden;
-}
-.card-right img {
-  max-height: 150%;
-  max-width: 100%;
-}
-.card-right:hover { 
-    transform: scale(1.1); 
-}
-@media only screen and (max-width: 1024px){
- .card {
-  max-height: 300px;
- }
-}
-@media only screen and (max-width: 930px){
-  .card {
-   max-height: 300px;
-  }
-  .card-right img {
-    height: 350px;
-    width: auto;
-  }
-  .join-card {
-    width: 90%;
-  }
- }
+/*  MARQUEE (aka scrolling images)  @Index  */
 
 @keyframes marquee { /*marquee aka the logos animated bar BROKEN ON LOOP CAN'T FIGURE OUT FOX AT THE TIME*/
 0% {
@@ -420,6 +366,7 @@ p {
   margin: 0 2rem;
 }
 
+/*  FOOTER  */
 
 .footer{ /*THIS IS IN THE FOOTER RIGHT NOW*/
   max-width:1100px; 
@@ -548,11 +495,7 @@ footer .footer-copy{
     footer .footer-box .footer-right .content ul li{ margin-right: 18px;display: inline-block;font-size: 13px;}
 }
 
-
-
-
-/*TEST AREA BELLOW*/
-
+/*  FAQ  */
 
 .collapsible-faq {
   /* Style the button that is used to open and close the collapsible content */
@@ -571,14 +514,12 @@ footer .footer-copy{
   border-radius: 25px;
   transition: border-radius 1s; /* Add a transition for border-radius */
 }
-
 .collapsible-faq.open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom: none;
   transition: none; /* Disable transition when open */
 }
-
 .collapsible-faq-content {
   padding: 0 18px;
   background-color: var(--color-title);
@@ -595,11 +536,95 @@ footer .footer-copy{
   border-bottom-right-radius: 25px;
   border-top: none;
 }
-
 .collapsible-faq-content.closed {
   border-top: none;/* Remove the border when content is closed */
 }
-
 .blacktext-faq {
   color: var(--color-primary);
+  padding: 10px;
+}
+
+
+/*TEST AREA BELLOW*/
+
+.joinus-image img{
+  /* Add the blur effect */
+  filter: blur(4px);
+  /* Full height */
+  width: 100%;
+  /* Center and scale the image nicely */
+  display: block;
+  max-height: 400px;
+}
+/* Position text in the middle of the page/image */
+.joinus-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid var(--color-title);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  z-index: 2;
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+}
+
+.button-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -240%);
+  display: flex;
+  flex-direction: row; /* Ensure buttons are in a row */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  z-index: 3; /* Ensure the buttons are on top of the image and text */
+}
+
+/* Style the buttons */
+.button {
+  background-color: rgba(0,0,0, 0.7);
+  color: var(--color-white);
+  padding: 10px 20px;
+  border: 3px solid var(--color-title);
+  cursor: pointer;
+  margin: 10px; /* Add some spacing between buttons */
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1024px){
+  .joinus-text{
+    transform: translate(-50%, -240%);
+    width: 100%;
+  }
+  .button-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -140%);
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .joinus-text{
+    transform: translate(-50%, -160%);
+    width: 100%;
+  }
+  .button-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+}
+@media only screen and (max-width: 600px){
+  .joinus-text{
+    transform: translate(-50%, -160%);
+    width: 100%;
+  }
+  .button-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
 }
