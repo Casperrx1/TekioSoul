@@ -4,13 +4,13 @@
   margin: 0px;
   padding: 0px;
 } 
-:root{ /*defines the root element kindoff like html bellow but higher priority*/
+:root{ /*defines the root element kind off like html bellow but higher priority*/
 --font_01:sans-serif;
 --font_02:'Rubik'; /*NEED TO DELETE THE ' FOR IT TO WORK PLACE HOLDER FOR NOW*/
 --color-white:#fff; /*Text*/
 --color-primary: #161616; /*Background*/
 --color-title:#f3c436; /*Link text footer*/
---color-line:#fff; /*Lince color*/
+--color-line:#fff; /*Line color*/
 --color-gra:linear-gradient(#9e355d, #7f3254, #4b2735 ); /*Footer*/
 }
 html { /*defines the styling for the HTML element, including the scroll behavior and padding.*/
@@ -21,6 +21,7 @@ html { /*defines the styling for the HTML element, including the scroll behavior
 }
 body { /*defines the styling for the body element, including the background color, font family, size, and color, as well as the height, background image, and background attachment.*/
     margin: 0;
+    width: 100%;
   background-color: var(--color-primary);
 	text-align: left;
 	font-family: var(--font_01);
@@ -50,8 +51,6 @@ img { /*defines the styling for images*/
 p {
   color: var(--color-white);
 }
-
-
 .bolded { /*BOLDED*/
   font-weight: bold; 
 }
@@ -71,7 +70,9 @@ p {
   margin-right: auto;
 }
 
-.popup {   /* CSS for popup */
+/* POPUP */
+
+.popup {   
   background: #009579;
   position: fixed;
   z-index: 9999; /* Add this line */
@@ -98,6 +99,7 @@ p {
   color: #ffffff;
 }
 
+/* LOGO BIG & SMALL */
 
 .logo {
   width: auto;
@@ -128,6 +130,7 @@ p {
   }
 }
 
+/* NAVIGATION BAR */
 
 .topnav {
     color: white;
@@ -171,7 +174,7 @@ p {
     cursor: pointer;
   }
   .topnav .mainMenu .closeMenu,
-  .icons i { /*For the icons in the mobile top nav menu opne and close*/
+  .icons i { /*For the icons in the mobile top nav menu open and close*/
     font-size: 2rem;
     display: none;
     cursor: pointer;
@@ -285,8 +288,8 @@ p {
   grid-template-columns: 1fr 1fr 1fr; /*This is the sizing for the column grid it uses fractions*/
   margin-inline: auto;
   padding-block: 0rem;
-  width: min(95%, 70rem);
-  gap: 2rem;
+  width: min(95%, 100rem);
+  gap: 5rem;
 }
 .even-columns-title{
   font-family: var(--font_01);
@@ -544,14 +547,13 @@ footer .footer-copy{
   padding: 10px;
 }
 
-
-/*TEST AREA BELLOW*/
+/* JOIN US */
 
 .joinus-image img{
   /* Add the blur effect */
   filter: blur(4px);
   /* Full height */
-  width: 100%;
+  width: 90%;
   /* Center and scale the image nicely */
   display: block;
   max-height: 400px;
@@ -571,7 +573,6 @@ footer .footer-copy{
   padding: 20px;
   text-align: center;
 }
-
 .button-container {
   position: absolute;
   left: 50%;
@@ -582,7 +583,6 @@ footer .footer-copy{
   align-items: center; /* Center the buttons vertically */
   z-index: 3; /* Ensure the buttons are on top of the image and text */
 }
-
 /* Style the buttons */
 .button {
   background-color: rgba(0,0,0, 0.7);
@@ -593,7 +593,6 @@ footer .footer-copy{
   margin: 10px; /* Add some spacing between buttons */
   font-size: 20px;
 }
-
 @media only screen and (max-width: 1024px){
   .joinus-text{
     transform: translate(-50%, -240%);
@@ -605,7 +604,6 @@ footer .footer-copy{
     transform: translate(-50%, -140%);
   }
 }
-
 @media only screen and (max-width: 768px){
   .joinus-text{
     transform: translate(-50%, -160%);
