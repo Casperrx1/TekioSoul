@@ -48,6 +48,9 @@ img { /*defines the styling for images*/
   overflow-clip-margin: content-box;
   overflow: clip;
 }
+a {
+  color: var(--color-white);
+}
 p {
   color: var(--color-white);
 }
@@ -281,64 +284,6 @@ p {
     }
   }
 
-/*  EVEN IMAGE COLUMNS @Index  */
-
-.even-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /*This is the sizing for the column grid it uses fractions*/
-  margin-inline: auto;
-  padding-block: 0rem;
-  width: min(95%, 100rem);
-  gap: 5rem;
-}
-.even-columns-title{
-  font-family: var(--font_01);
-  text-align: center;
-  color: var(--color-title);
-  padding-bottom: 5px;
-}
-.even-columns-text{
-  font-family: var(--font_01);
-  text-align: justify;
-  color: var(--color-white);
-  font-size: 16px ;
-}
-.even-columns-img{
- align-content: center;
- max-width: 100%;
-}
-@media only screen and (max-width: 830px) {/*Makes the columns stack to fit well on mobile*/
-  .even-columns {
-    display: block ;
-    grid-template-columns: 1fr;
-    gap: 0rem;
-  }
-  .even-columns > div {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .even-columns-title{
-    font-size: 25px;
-  }
-  .even-columns-img{
-    max-width: 50%;
-    margin: 0 auto;
-    justify-content: center; /* Added property */
-    display: flex;
-    margin-bottom: 5px;
-   }
-}
-
-/*  OTHER TALENT IMAGE @Index  */
-
-.othertalent img {
-  display: block;
-  height: auto;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /*  MARQUEE (aka scrolling images)  @Index  */
 
 @keyframes marquee { /*marquee aka the logos animated bar BROKEN ON LOOP CAN'T FIGURE OUT FOX AT THE TIME*/
@@ -377,7 +322,7 @@ p {
   margin: 0 auto;
 }
 a { /*This deletes underline in Links and ads hover transition  */
-  color: #000;
+  color: var(--color-white);
   text-decoration: none;
   outline:none;
   transition: 0.2s;}
@@ -498,6 +443,64 @@ footer .footer-copy{
     footer .footer-box .footer-right .content ul li{ margin-right: 18px;display: inline-block;font-size: 13px;}
 }
 
+/*  EVEN IMAGE COLUMNS @Index  */
+
+.even-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /*This is the sizing for the column grid it uses fractions*/
+  margin-inline: auto;
+  padding-block: 0rem;
+  width: min(95%, 100rem);
+  gap: 5rem;
+}
+.even-columns-title{
+  font-family: var(--font_01);
+  text-align: center;
+  color: var(--color-title);
+  padding-bottom: 5px;
+}
+.even-columns-text{
+  font-family: var(--font_01);
+  text-align: justify;
+  color: var(--color-white);
+  font-size: 16px ;
+}
+.even-columns-img{
+ align-content: center;
+ max-width: 100%;
+}
+@media only screen and (max-width: 830px) {/*Makes the columns stack to fit well on mobile*/
+  .even-columns {
+    display: block ;
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+  .even-columns > div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .even-columns-title{
+    font-size: 25px;
+  }
+  .even-columns-img{
+    max-width: 50%;
+    margin: 0 auto;
+    justify-content: center; /* Added property */
+    display: flex;
+    margin-bottom: 5px;
+   }
+}
+
+/*  OTHER TALENT IMAGE @Index  */
+
+.othertalent img {
+  display: block;
+  height: auto;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*  FAQ  */
 
 .collapsible-faq {
@@ -551,12 +554,14 @@ footer .footer-copy{
 
 .joinus-image img{
   /* Add the blur effect */
-  filter: blur(4px);
+  filter: blur(2px);
   /* Full height */
-  width: 90%;
   /* Center and scale the image nicely */
   display: block;
-  max-height: 400px;
+  width: 100%;
+  max-height: 500px;
+  position: relative;
+  max-width: 100%;
 }
 /* Position text in the middle of the page/image */
 .joinus-text {
@@ -626,3 +631,5 @@ footer .footer-copy{
     transform: translate(-50%, -100%);
   }
 }
+
+
